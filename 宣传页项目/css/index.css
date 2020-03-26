@@ -1,0 +1,424 @@
+/*
+BEM 设计模式
+
+模块（没有前缀，多个单词用 - 连接）
+元素（元素在模块之后，可以有多个层级，以 __ 连接）
+修饰（某元素、或者某模块特别的状态，必须有一个状态名和状态值，使用 _ 链接）
+
+*/
+
+
+/*页面头部导航*/
+.header{
+    background: transparent;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    z-index: 3;
+    color: #fff;
+    line-height: 60px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.header__logo{
+	position: absolute;
+	left: 10px;
+	width: 150px;
+	text-indent: 50px;
+	font-weight: bold;
+	background: url(../img/logo.png) center left no-repeat;
+}
+.header__nav{
+	position: absolute;
+	right: 20px;
+	display: inline-block;
+}
+.header__nav-item{
+    color: inherit;/*让a标签继承父元素颜色，不然会有默认颜色蓝色*/
+    padding-right: 40px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.header__nav-item_active{
+	color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+	line-height: 50px;
+	padding:0;
+	background: #ff0000;
+	border-radius: 5px;
+    padding:8px 15px;
+    transition: all 1s;
+}
+.header__nav-item_active:hover{
+    background: #be0027;
+}
+
+.header__nav-tip{
+	position: absolute;
+	left: 0px;
+	top: 48px;
+	width: 56px;
+	height: 2px;
+	background: #f01400;
+	transition: all .5s;
+}
+
+
+/*第一屏*/
+.screen-1{
+	position: relative;
+	height: 640px;
+	background: url(../img/sc1.jpg) center top no-repeat;
+	background-size: cover;
+	color: #fff;
+}
+.screen-1__heading{
+    position: absolute;
+    left: 50%;
+    margin-left: -176px;
+    top: 240px;
+    font-size: 44px;
+}
+.screen-1__subheading{
+    position: absolute;
+    left: 50%;
+    margin-left: -117px;
+    top: 322px;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+/*第二屏*/
+.screen-2{
+	position: relative;
+	height:640px;
+	background: #f3f5f7;
+	color: #07111b;
+	overflow: hidden;
+}
+.screen-2__heading{
+	position: absolute;
+    left: 50%;
+    margin-left: -242px;
+    top: 88px;
+    font-size: 44px;
+    font-weight: bold;
+}
+.screen-2__underliner{
+	position: absolute;
+    left: 50%;
+    margin-left: -25px;
+    top: 167px;
+    width: 50px;
+    height: 2px;
+    background: #ff0000;
+}
+.screen-2__subheading{
+	position: absolute;
+	left: 50%;
+    margin-left: -215px;
+    top: 192px;
+    font-size: 16px;
+    text-align: center;
+}
+.screen-2__photo_i_1{
+	position: absolute;
+	left: 50%;
+	margin-left: -375px;
+	bottom: 0px;
+	width: 750px;
+	height: 361px;
+	z-index: 0;
+	background: url(../img/sc2.png);
+}
+.screen-2__photo_i_2{
+	position: absolute;
+	left: 50%;
+	margin-left: -137px;
+	bottom: 0px;
+	width: 275px;
+	height: 380px;
+	z-index: 2;
+	background: url(../img/sc2-1.png);
+}
+.screen-2__photo_i_3{
+	position: absolute;
+	left: 50%;
+	margin-left: -34px;
+	bottom: 101px;
+	width: 266px;
+	height: 205px;
+	z-index: 1;
+	background: url(../img/sc2-2.png);
+}
+
+/*第三屏*/
+.screen-3{
+	position: relative;
+	height:640px;
+	width: 100%;
+	background: #2b333b;
+	color: #ffffff;
+}
+.screen-3__heading{
+	position: absolute;
+    left: 50%;
+    top: 229px;
+    font-size: 38px;
+    font-weight: bold;
+}
+.screen-3__underliner{
+	position: absolute;
+    left: 50%;
+    top: 295px;
+    width: 50px;
+    height: 2px;
+    background: #ff0000;
+}
+.screen-3__subheading{
+	position: absolute;
+	left: 50%;
+    top: 322px;
+}
+.screen-3__photo{
+	position: absolute;
+	left: 130px;
+	/*bottom: 5px;*/
+	bottom: -60px;
+	width: 570px;
+	height: 630px;
+	background: url(../img/sc3.png) no-repeat;
+	/*background-size: cover;*/
+	background-size: 80%;
+}
+.screen-3__button{
+    position: absolute;
+    height: 80px;
+    line-height: 80px;
+    left: 50%;
+    top: 520px;
+
+}
+.screen-3__button_i_1,
+.screen-3__button_i_2,
+.screen-3__button_i_3,
+.screen-3__button_i_4,
+.screen-3__button_i_5{
+	display: inline-block;
+    margin-right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    line-height: 60px;
+    text-align: center;
+    font-size: 12px;
+}
+.screen-3__button_i_1{
+	color: #1f5975;
+	border:5px solid #1f5975;
+}
+.screen-3__button_i_2{
+	color: #424d76;
+	border:5px solid #424d76;
+}
+.screen-3__button_i_3{
+	color: #6b4146;
+	border:5px solid #6b4146;
+}
+.screen-3__button_i_4{
+	color: #29535f;
+	border:5px solid #29535f;
+}
+.screen-3__button_i_5{
+	color: #3e4e40;
+	border:5px solid #3e4e40;
+}
+
+/*第四屏*/
+.screen-4{
+	position: relative;
+	height:640px;
+	background: #fff;
+}
+.screen-4__heading{
+	position: absolute;
+    left: 50%;
+    margin-left: -242px;
+    top: 88px;
+    font-size: 44px;
+    font-weight: bold;
+}
+.screen-4__underliner{
+	position: absolute;
+    left: 50%;
+    margin-left: -25px;
+    top: 167px;
+    width: 50px;
+    height: 2px;
+    background: #ff0000;
+}
+.screen-4__subheading{
+	position: absolute;
+	left: 50%;
+    top: 192px;
+    margin-left: -120px;
+    font-size: 16px;
+}
+.screen-4__item{
+	position: absolute;
+	left: 50%;
+    margin-left: -600px;
+    top: 288px;
+	width: 1200px;
+}
+.screen-4__item_i_1,
+.screen-4__item_i_2,
+.screen-4__item_i_3,
+.screen-4__item_i_4{
+	position: relative;
+	width: 300px;
+	height: 120px;
+	float: left;
+	text-align: center;
+}
+.screen-4__item_i_1{
+    background: url(../img/sc4-1.png) center top no-repeat;
+}
+.screen-4__item_i_2{
+	background: url(../img/sc4-2.png) center top no-repeat;
+}
+.screen-4__item_i_3{
+	background: url(../img/sc4-3.png) center top no-repeat;
+}
+.screen-4__item_i_4{
+	background: url(../img/sc4-4.png) center top no-repeat;
+}
+
+.screen-4__item_i_1 > div,
+.screen-4__item_i_2 > div,
+.screen-4__item_i_3 > div,
+.screen-4__item_i_4 > div{
+    padding-top:100px;
+    font-size: 16px;
+}
+
+/*第五屏*/
+.screen-5{
+	position: relative;
+	height:640px;
+	background:url(../img/sc5.jpg) center top no-repeat;
+	background-size: cover;
+	color: #fff;
+}
+.screen-5__heading{
+	position: absolute;
+    left: 50%;
+    margin-left: -220px;
+    top: 358px;
+    font-size: 44px;
+    font-weight: bold;
+}
+.screen-5__underliner{
+	position: absolute;
+    left: 50%;
+    margin-left: -25px;
+    top: 428px;
+    width: 50px;
+    height: 2px;
+    background: #fff;
+}
+.screen-5__subheading{
+	position: absolute;
+	left: 50%;
+    top: 463px;
+    margin-left: -387px;
+    font-size: 18px;
+}
+.screen-5__photo{
+	position: absolute;
+	left: 50%;
+	top: 100px;
+	margin-left: -100px;
+	width: 200px;
+	height: 200px;
+	background: url(../img/sc5-1.png);
+}
+
+/*其他部分*/
+.other{
+	position: relative;
+	height: 200px;
+}
+.other__button{
+	position: absolute;
+	margin: auto;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	width: 238px;
+	height: 58px;
+	line-height: 60px;
+	text-align: center;
+	border-radius: 5px;
+	font-size: 16px;
+	border:1px solid #000;
+	font-weight: bold;
+	transition: all .5s;
+	cursor: pointer;
+}
+.other__button:hover{
+    color: #ff0000;
+}
+/*页脚部分*/
+.footer{
+	position: relative;
+	height: 105px;
+	background: #000;
+	color: #fff;
+}
+.footer__item{
+	position: absolute;
+	left: 50%;
+	margin-left: -323px;
+	top: 32px;
+	font-size: 12px;
+}
+.footer__item > a{
+	color: #c8cdd2;
+	margin-right: 34px;
+}
+.footer__item > a:last-child{
+	margin-right: 0px;
+}
+.footer__word{
+	position: absolute;
+	left: 50%;
+	margin-left: -266px;
+	top: 56px;
+	font-size: 15px;
+	color: #787d82;
+}
+
+/*侧边栏样式*/
+.outLine{
+    position: fixed;
+    top: 290px;
+    right: 0px;
+    width: 60px;
+    height: auto;
+    background: rgba(255,255,255,.5);
+    text-align: center;
+    transform: translate( 100% , 0);
+}
+.outLine__item{
+    width: auto;
+    height: auto;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.outLine__item:last-child{
+	margin-bottom: 10px;
+}
